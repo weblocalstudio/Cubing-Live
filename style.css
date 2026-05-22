@@ -1,0 +1,153 @@
+/* --- RESETEO Y ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 80px; /* Espacio para que la barra fija no tape el contenido del inicio */
+    text-align: center;
+}
+
+/* --- BARRA DE NAVEGACIÓN FIJA (HEADER) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #222; /* Color oscuro de fondo */
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que la barra siempre quede por encima de todo */
+}
+
+/* Contenedor de la foto y el nombre en la barra */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre la imagen y el texto */
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff5722; /* Color naranja cubo de Rubik */
+}
+
+/* Estilo para convertir la foto del canal en un avatar redondo */
+.channel-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 2px solid #ff5722; /* Borde naranja decorativo */
+}
+
+/* Enlaces del menú de navegación */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Color de los enlaces al pasar el ratón */
+nav a:hover {
+    color: #ff5722;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Galería de imágenes */
+.rubik-images {
+    margin: 20px 0;
+}
+
+.rubik-images img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover; /* Evita que las imágenes se distorsionen si no son cuadradas */
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- REPRODUCTOR DE VÍDEO RESPONSIVE (16:9) --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto mágica de YouTube */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- BOTÓN ROJO ESTILO YOUTUBE --- */
+.btn-youtube {
+    display: inline-block;
+    background-color: #ff0000; /* Rojo YouTube oficial */
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Efecto visual al pasar el ratón por encima del botón */
+.btn-youtube:hover {
+    background-color: #cc0000;
+    transform: scale(1.05); /* Agranda el botón un 5% */
+}
+
+/* Relleno extra abajo para probar el scroll de la página */
+.dummy-scroll {
+    height: 500px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px dashed #eee;
+    color: #bbb;
+    font-style: italic;
+}
