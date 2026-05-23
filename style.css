@@ -1,115 +1,187 @@
-/* --- RESETEO Y ESTILOS GENERALES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-body {
-    background-color: #f4f4f9;
-    color: #333;
-    padding-top: 80px; /* Espacio para que la barra fija no tape el contenido del inicio */
-    text-align: center;
-}
-
-/* --- BARRA DE NAVEGACIÓN FIJA (HEADER) --- */
-header {
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px 20px;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #222; /* Color oscuro de fondo */
-    color: #fff;
-    display: flex;
-    justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
-    align-items: center;
-    padding: 0 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Asegura que la barra siempre quede por encima de todo */
+    right: 0;
+    z-index: 1000;
+
+
+
+
 }
 
-/* Contenedor de la foto y el nombre en la barra */
-.logo-container {
+.logo img{
+
+    width: 100px;
+    border-radius:50%;
+    border: 2px gray solid;
+}
+
+.lista{
+
     display: flex;
-    align-items: center;
-    gap: 12px; /* Espacio entre la imagen y el texto */
-    font-size: 1.4rem;
+    gap: 20px;
+    margin: 20px;
+    margin-right: 40px;
+
+}
+
+.lista li a{
+    
+    color: WHITE;
+
+    font-size: 25px;
     font-weight: bold;
-    color: #ff5722; /* Color naranja cubo de Rubik */
-}
-
-/* Estilo para convertir la foto del canal en un avatar redondo */
-.channel-logo {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 50%; /* Hace la imagen redonda */
-    border: 2px solid #ff5722; /* Borde naranja decorativo */
-}
-
-/* Enlaces del menú de navegación */
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-/* Color de los enlaces al pasar el ratón */
-nav a:hover {
-    color: #ff5722;
-}
-
-/* --- CONTENIDO PRINCIPAL --- */
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
+    padding: 10px 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.4s;
+    background-color: rgb(245, 100, 100);
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 10px;
+.lista li a:hover{
+   background-color: rgb(255, 12, 12);
+   font-size: 30px;
+
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
+body{
+   background-image: url("fondoweb.jpg");
+   padding-top: 80px;
+
 }
 
-/* Galería de imágenes */
-.rubik-images {
-    margin: 20px 0;
+.inicio{
+    padding: 10px 20px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    background-color: rgba(112, 212, 243, 0.5);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.rubik-images img {
-    width: 170px;
-    height: 170px;
-    object-fit: cover; /* Evita que las imágenes se distorsionen si no son cuadradas */
-    border-radius: 8px;
-    margin: 0 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.boton{
+    padding: 15px;
+    background-color: red;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+
 }
 
-/* --- REPRODUCTOR DE VÍDEO RESPONSIVE (16:9) --- */
+.boton:hover{
+    font-size: 20px;
+    filter: brightness(120%);
+    box-shadow: 0 0 10px red;
+}
+
+.inicio h3{
+    font-size: 23px;
+    color: white;
+}
+
+.inicio h2{
+    font-size: 23px;
+    color: white;
+}
+
+.menu-check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icono {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    .menu-icono span {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    .lista {
+        display: flex; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #000000; 
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 9999;
+    }
+
+    .menu-check:checked ~ .lista {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .lista li {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .lista li a {
+        display: block;
+        margin: 10px 20px;
+        font-size: 20px;
+        padding: 12px 0;
+        box-sizing: border-box;
+    }
+
+    .lista li a:hover {
+        font-size: 22px; 
+    }
+
+    .menu-check:checked ~ .menu-icono span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-check:checked ~ .menu-icono span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-check:checked ~ .menu-icono span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto mágica de YouTube */
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
     height: 0;
     overflow: hidden;
-    max-width: 100%;
-    background-color: #000;
-    border-radius: 8px;
-    margin: 30px 0;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
 }
 
 .video-container iframe {
@@ -118,36 +190,27 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
 }
 
-/* --- BOTÓN ROJO ESTILO YOUTUBE --- */
-.btn-youtube {
-    display: inline-block;
-    background-color: #ff0000; /* Rojo YouTube oficial */
-    color: #fff;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+                                                                                           
+                         
+ /* Estilos específicos para la página de Error 404 */
+.error-404 h1 {
+    font-size: 90px;
+    color: red;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Efecto visual al pasar el ratón por encima del botón */
-.btn-youtube:hover {
-    background-color: #cc0000;
-    transform: scale(1.05); /* Agranda el botón un 5% */
+.error-404 h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-/* Relleno extra abajo para probar el scroll de la página */
-.dummy-scroll {
-    height: 500px;
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 2px dashed #eee;
-    color: #bbb;
-    font-style: italic;
+.error-404 p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
 }
+
+

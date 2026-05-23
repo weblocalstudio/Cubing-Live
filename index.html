@@ -1,52 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubing Live - Home</title>
+    <title>Web Oficial de Cubing Live</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
 </head>
 <body>
+    <nav class="navbar">
+        <a class="logo" href="index.html"><img src="Logo_cubing_live.jpg"></a>
 
-    <header>
-        <div class="logo-container">
-            <img src="img/cubo1.png" alt="Cubing Live Logo" class="channel-logo">
-            <span>Cubing Live</span>
-        </div>
-        
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#contactanos">Contáctanos</a>
-        </nav>
-    </header>
+        <input type="checkbox" id="menu-toggle" class="menu-check">
+        <label for="menu-toggle" class="menu-icono" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <main id="inicio">
-        <h1>Cubing Live</h1>
-        <p class="subtitle">¡Bienvenidos a mi rincón de speedcubing y cubos de Rubik!</p>
-
-        <div class="rubik-images">
-            <img src="img/cubo1.png" alt="Cubo de Rubik 3x3">
-            <img src="img/cubo2.jpg" alt="Cubo Rubik de velocidad">
-        </div>
-
+        <ul class="lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about/">Sobre mí</a><li>
+        </ul>
+    </nav>
+    <br><br><br><br>
+    <div class="inicio">
+        <h3>Cubing Live es un canal de youtube sobre speedcubing que busca fomentar el entretenimiento y aprendizaje. <span> ¡Mira mi último video!</span></h2>
+        <br>
+        <hr>
+        <br>
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/52wAli39rzM" 
-                title="Presentación de Cubing Live :)" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.youtube.com/embed/3KFce938Y4Q?si=3VPchaVQjES8856b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 20px;"></iframe>
         </div>
+        <br><br><br>
+        <a class="boton" href="https://www.youtube.com/@RJCuberEspa%C3%B1a/videos" target_blank>Click aquí para visitar mi canal de youtube</a>
+        <br><br>
+    </div>
 
-        <a href="https://www.youtube.com/@RJCuberEspa%C3%B1a" target="_blank" class="btn-youtube">
-            Visita mi Canal de YouTube
-        </a>
-        
-        <div class="dummy-scroll">
-            <p>(Espacio de prueba: Haz scroll hacia abajo para ver cómo la barra de arriba se mantiene fija siempre)</p>
-        </div>
-    </main>
-
+    
 </body>
-</html>
+</html
